@@ -23,6 +23,7 @@ public class SelectSeat extends JFrame implements ActionListener, MouseListener 
 	
 	// 클래스 작성자 : 지수빈
 	// 안 되는 거 : 좌석 버튼이 파란색일 때 선택하면 이미 예약된 좌석이라고 띄우기, 좌석 선택하고 '선택완료' 버튼 눌렀을 때 정보 담은 창 띄우기
+	// 버튼 하나씩 만들지 않고 배열로 만드는 것까지 성공하고 리스너 고치는 중(코드는 안고쳐놓음)
 	
 	private JPanel panSelectNum, panSelectSeat, panBtn;
 	private SpinnerNumberModel numberModel;
