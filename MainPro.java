@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-
+//민주
 public class MainPro extends JFrame{
 
 	private String mt[]  = {"열차","출발시간","도착역","도착시간"};
@@ -44,12 +44,12 @@ public class MainPro extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		jp1 = new JPanel();
-		//jp1.setLayout(new FlowLayout());
+		jp1.setLayout(new FlowLayout(1, 200, 0));
 		
 		cb = new JComboBox<String>(station);
 		jp1.add(cb);
 		
-		lbl = new JLabel("현재시각 : 12:22");
+		lbl = new JLabel("현재시각 : 12:22", JLabel.RIGHT);
 		jp1.add(lbl);
 		
 		jp2 = new JPanel();
@@ -62,17 +62,19 @@ public class MainPro extends JFrame{
 		jp3 = new JPanel();
 		jp3.setPreferredSize(new Dimension(180, 120));
 		btn1 = new JButton("승차권예매");
+		btn1.setPreferredSize(new Dimension(150, 35));
 		btn1.setBounds(30, 30, 30, 30);
 		jp3.add(btn1);
 		
 		btn2 = new JButton("승차권확인");
+		btn2.setPreferredSize(new Dimension(150, 35));
 		btn2.setBounds(30, 30, 30, 30);
 		jp3.add(btn2);	
 		
 			
 		btn3 = new JButton("로그아웃");
 		btn3.setBounds(30, 30, 30, 30);
-		btn3.setPreferredSize(new Dimension(100, 40));
+		btn3.setPreferredSize(new Dimension(150, 35));
 		jp3.add(btn3);
 		
 		

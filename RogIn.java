@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 
 public class RogIn extends JFrame implements ActionListener{
 
+	//민주
 	private JPanel jp1;
 	private JPanel jp2;
 	private JLabel lblid;
