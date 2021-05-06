@@ -21,6 +21,9 @@ import javax.swing.border.LineBorder;
 
 public class SelectSeat extends JFrame implements ActionListener, MouseListener {
 	
+	// 클래스 작성자 : 지수빈
+	// 안되는거 : 좌석 버튼이 파란색일 때 선택하면 이미 예약된 좌석이라고 띄우기, 좌석 선택하고 '선택완료' 버튼 눌렀을 때 정보 담은 창 띄우기
+	
 	private JPanel panSelectNum, panSelectSeat, panBtn;
 	private SpinnerNumberModel numberModel;
 	private JSpinner spinner;
@@ -54,19 +57,13 @@ public class SelectSeat extends JFrame implements ActionListener, MouseListener 
 		String[] CarNum = new String[] {"1호차", "2호차", "3호차", "4호차", "5호차", "6호차", "7호차", "8호차"};
 		listModel = new SpinnerListModel(CarNum);
 		spinner = new JSpinner(listModel);
-//		spinner.setSize(100, 100);
 		
 		panSelectNum.add(spinner);
 		
 		// 좌석 선택 패널
-//		panSelectSeat = new JPanel(new GridLayout(3, 2));
 		panSelectSeat = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 20));
 		
 		int i = 0;
-		
-//		for(i = 1; i < 7; i++) {
-//			SeatNum = new String[] {i + "A"};
-//		}
 		
 		JButton[] btnSeat = {btn1A, btn2A, btn3A, btn4A, btn5A, btn6A};
 		
@@ -152,12 +149,6 @@ public class SelectSeat extends JFrame implements ActionListener, MouseListener 
 		if(obj == btnSelect && cnt != 0) {
 			JOptionPane.showMessageDialog(null, "이미 예약된 좌석입니다", "메시지", JOptionPane.INFORMATION_MESSAGE);
 		}
-		
-//		for(i = 1; i < 7; i++) {
-//			if(obj == btnSelect && obj == btnSeat) {
-//				JOptionPane.showMessageDialog(null, "이미 선택된 좌석입니다", "메시지", JOptionPane.INFORMATION_MESSAGE);
-//			}
-//		}
 		
 	}
 
