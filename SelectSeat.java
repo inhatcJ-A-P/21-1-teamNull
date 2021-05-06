@@ -22,7 +22,7 @@ import javax.swing.border.LineBorder;
 public class SelectSeat extends JFrame implements ActionListener, MouseListener {
 	
 	// 클래스 작성자 : 지수빈
-	// 안되는거 : 좌석 버튼이 파란색일 때 선택하면 이미 예약된 좌석이라고 띄우기, 좌석 선택하고 '선택완료' 버튼 눌렀을 때 정보 담은 창 띄우기
+	// 안 되는 거 : 좌석 버튼이 파란색일 때 선택하면 이미 예약된 좌석이라고 띄우기, 좌석 선택하고 '선택완료' 버튼 눌렀을 때 정보 담은 창 띄우기
 	
 	private JPanel panSelectNum, panSelectSeat, panBtn;
 	private SpinnerNumberModel numberModel;
