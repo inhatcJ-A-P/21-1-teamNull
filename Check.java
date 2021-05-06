@@ -28,7 +28,9 @@ import com.sun.jdi.connect.spi.Connection;
 import com.sun.net.httpserver.Authenticator.Result;
 
 public class Check extends JFrame implements ActionListener{
-		
+	//클래스 작성자 : 이규남
+	//안되는 부분은 테이블 안에 버튼으 넣는 방법
+	//데이터 베이스를 끌어오는 방법
 	JTable tb;
 	JButton jb1;
 	JButton jb2;
@@ -63,9 +65,10 @@ public class Check extends JFrame implements ActionListener{
 				{"무궁화호", "서울역","부산역"," 45석남음", "30,200",(JButton)jb3},
 				};
 		DefaultTableModel dtm = new DefaultTableModel(content,header);
-		tb = new JTable(dtm);
-		DefaultTableCellRenderer tcr = new DefaultTableCellRenderer();
 		
+		tb = new JTable(dtm);
+		tb.setPreferredScrollableViewportSize(new Dimension(500, 300));
+			
 		JScrollPane sp = new JScrollPane(tb);
 		tb.getTableHeader().setBackground(Color.DARK_GRAY);
 		tb.getTableHeader().setForeground(Color.white);
