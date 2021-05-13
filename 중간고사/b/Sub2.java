@@ -65,26 +65,13 @@ public class Sub2 extends JFrame implements ActionListener {
 		if(obj == b1) {
 			temp = Integer.parseInt(tx1.getText());
 			star = new JLabel[temp];
-			
-			if(test == 0) {
-				for (int i = 0; i < star.length; i++) {
-					star[i] = new JLabel("*");
-					x = (int) (Math.random()*280);
-					y = (int) (Math.random()*215);
-					star[i].setBounds(x,y, 20, 20);	
-					p2.add(star[i]);
-				}
-				test = 1;
-			}
-			else {
-				p2.removeAll();
-				for (int i = 0; i < star.length; i++) {
-					star[i] = new JLabel("*");
-					x = (int) (Math.random()*280);
-					y = (int) (Math.random()*215);
-					star[i].setBounds(x,y, 20, 20);	
-					p2.add(star[i]);
-				}
+			p2.removeAll();
+			for (int i = 0; i < star.length; i++) {
+				star[i] = new JLabel("*");
+				x = (int) (Math.random()*280);
+				y = (int) (Math.random()*215);
+				star[i].setBounds(x,y, 20, 20);	
+				p2.add(star[i]);
 			}
 			p2.revalidate();		// 자바 스윙에서 컨트롤을 동적 변화 시켯을때 아래 명령어를 써줘야함 업데이트 느낌?
 			p2.repaint();
