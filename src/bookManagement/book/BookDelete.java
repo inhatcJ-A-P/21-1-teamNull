@@ -28,7 +28,7 @@ public class BookDelete extends JFrame implements ActionListener {
 		this.setTitle(title);
 		setSize(width, height);
 		setLocationRelativeTo(this); 	//화면 가운데 찍음
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫을수 있는 특정 상수값을 주었기 때문에 프레임 종료버튼이 클릭될때 프로그램도 같이 사라짐 
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫을수 있는 특정 상수값을 주었기 때문에 프레임 종료버튼이 클릭될때 프로그램도 같이 사라짐 
 
 		p1 = new JPanel();
 		l1 = new JLabel("도서삭제");

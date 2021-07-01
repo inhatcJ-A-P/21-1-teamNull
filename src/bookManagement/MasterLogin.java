@@ -44,12 +44,12 @@ public class MasterLogin extends JFrame implements ActionListener {
 		JPanel pa2 = new JPanel();
 		
 		JLabel lb1 = new JLabel("ID : ");
-		tf1 = new JTextField("admin",10);
+		tf1 = new JTextField(10);
 		pa2.add(lb1);
 		pa2.add(tf1);
 		
 		JLabel lb2 = new JLabel("PW : ");
-		tf2 = new JPasswordField("1234",10);
+		tf2 = new JPasswordField(10);
 		pa2.add(lb2);
 		pa2.add(tf2);
 		
