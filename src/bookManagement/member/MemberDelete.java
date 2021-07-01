@@ -91,6 +91,7 @@ public class MemberDelete extends JFrame implements ActionListener {
 					String sql = "delete from member where mb_num='" + t1.getText() + "'";
 					UserDelete(sql);
 					JOptionPane.showMessageDialog(null, "삭제가 완료되었습니다.", "메시지", JOptionPane.INFORMATION_MESSAGE);
+					t1.setText("");
 				}
 			}
 
