@@ -25,10 +25,10 @@ import bookManagement.BookMain;
 import jdbc.DB;
 
 public class MemberList extends JFrame implements ActionListener {
-	JPanel p1, p2, Last;
-	JButton b1, b2, b3, b4, b5, b6;
-	JTable table;
-	JScrollPane scroll;
+	private JPanel p1, p2, Last;
+	private JButton b1, b2, b3, b4, b5, b6;
+	private JTable table;
+	private JScrollPane scroll;
 	private DefaultTableModel model;
 	private PreparedStatement ps;
 	private ResultSet rs;
@@ -40,10 +40,11 @@ public class MemberList extends JFrame implements ActionListener {
 
 	public MemberList(String Title, int width, int height) {
 		setTitle(Title);
-		
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this);
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		p1 = new JPanel();
 		Last = new JPanel();
 		b1 = new JButton("새로고침");
