@@ -29,6 +29,7 @@ public class BookInfoModify extends JFrame implements ActionListener {
 		this.setTitle(title);
 		setSize(width, height);
 		setLocationRelativeTo(this); 	//화면 가운데 찍음
+		setResizable(false);//화면 크기 변경 막음
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫을수 있는 특정 상수값을 주었기 때문에 프레임 종료버튼이 클릭될때 프로그램도 같이 사라짐 
 		
 		setLocationRelativeTo(this); 	//화면 가운데 찍음
@@ -148,10 +149,15 @@ public class BookInfoModify extends JFrame implements ActionListener {
 			}
 		}
 		else if(obj == b2) {
+		if(t7.getText().equals("Y")||t7.getText().equals("N")){
 			String sql = "update lib set lib_code='" + t2.getText() + "', " + "lib_name='" + t3.getText() + "', "
 					+ "lib_author='" + t4.getText() + "', " + "lib_publisher='" + t5.getText() + "', lib_price='" + t6.getText() + "', lib_state='" + t7.getText() + "' " + " where lib_code='"
 					+ t1.getText() + "'";
-			getBookUpdate(sql);
+			getBookUpdate(sql); 
+		} else {
+			JOptionPane.showMessageDialog(null, "Y나N만 입력해주세요");
 		}
+		}
+		
 }
 }
