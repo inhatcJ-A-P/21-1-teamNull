@@ -27,6 +27,7 @@ public class BookDelete extends JFrame implements ActionListener {
 	public BookDelete(String title, int width, int height, BookManage bookManage) {
 		this.setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this); 	//화면 가운데 찍음
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫을수 있는 특정 상수값을 주었기 때문에 프레임 종료버튼이 클릭될때 프로그램도 같이 사라짐 
 
@@ -94,6 +95,7 @@ public class BookDelete extends JFrame implements ActionListener {
 					String sql = "delete from lib where lib_code='" + t1.getText() + "'";
 					BookDelete(sql);
 					JOptionPane.showMessageDialog(null, "삭제가 완료되었습니다.", "메시지", JOptionPane.INFORMATION_MESSAGE);
+					t1.setText("");
 				}
 				
 				
