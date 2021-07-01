@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -134,18 +133,7 @@ public class BookRandB extends JFrame implements ActionListener {
 		today = sdf.format(t);
 	}
 
-//	public static void main(String[] args) {
-//		try {
-//			DB.init();
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-//		new BookRandB("대여 정보",500,600);
-//
-//	}
-	
+
 	public void setTable(String sql) {
 		try {
 			ResultSet rs = DB.getResultSet(sql);
@@ -155,7 +143,6 @@ public class BookRandB extends JFrame implements ActionListener {
 				phone = rs.getString(3);
 			}
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 	}
@@ -164,7 +151,6 @@ public class BookRandB extends JFrame implements ActionListener {
 		try {
 			DB.executeQuery(sql);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -200,16 +186,13 @@ public class BookRandB extends JFrame implements ActionListener {
 						String updatesql = "update lib set lib_state = 'N' where lib_code = '"+ tfBNumSub.getText() + "'";
 						query(updatesql);
 						bookRental.getTfRental().setText("N");
+						
 					}
 					else {
 						JOptionPane.showMessageDialog(null, "대여중인 도서입니다.", "메시지", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 				
-			
-			
-			
-			
 			
 		}
 		else if(obj == btnReturn) {
@@ -231,7 +214,9 @@ public class BookRandB extends JFrame implements ActionListener {
 				query(updatesql);
 				bookRental.getTfRental().setText("Y");
 				
-				
+				tfBNumSub.setText("");
+				tfBNameSub.setText("");
+				tfID.setText("");
 				
 			}
 			

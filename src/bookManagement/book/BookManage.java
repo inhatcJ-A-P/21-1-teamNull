@@ -32,7 +32,7 @@ public class BookManage extends JFrame implements ActionListener {
 	public BookManage(String Title, int width, int height) {
 		setTitle(Title);
 		setSize(width, height);
-		private 
+		
 		setLocationRelativeTo(this);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		p1 = new JPanel();
