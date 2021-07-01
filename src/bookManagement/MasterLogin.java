@@ -30,6 +30,7 @@ public class MasterLogin extends JFrame implements ActionListener {
 	public MasterLogin(String title, int width, int height) {
 		setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
