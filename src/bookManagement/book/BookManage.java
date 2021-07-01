@@ -23,14 +23,16 @@ import bookManagement.BookMain;
 import jdbc.DB;
 
 public class BookManage extends JFrame implements ActionListener {
-	JPanel p1,p2,Last;
-	JButton b1,b2,b3,b4,b5,b6;
-	JTable table;
-	JScrollPane scroll;
-	private DefaultTableModel model;		
+	private JPanel p1,p2,Last;
+	private JButton b1,b2,b3,b4,b5,b6;
+	private JTable table;
+	private JScrollPane scroll;
+	private DefaultTableModel model;	
+	
 	public BookManage(String Title, int width, int height) {
 		setTitle(Title);
 		setSize(width, height);
+		private 
 		setLocationRelativeTo(this);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		p1 = new JPanel();
