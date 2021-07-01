@@ -19,8 +19,8 @@ import jdbc.DB;
 
 public class MemberRegister extends JFrame implements ActionListener {
 	//종하
-	JButton b2;
-	private JButton b1;
+	
+	private JButton b1,b2;
 	private JTextField tf1;
 	private JTextField tf2;
 	private JTextField tf3;
@@ -29,6 +29,7 @@ public class MemberRegister extends JFrame implements ActionListener {
 	public MemberRegister(String title,int width, int height, MemberList memberList) {
 		setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this);
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.memberList = memberList;
@@ -127,6 +128,10 @@ public class MemberRegister extends JFrame implements ActionListener {
 				setInsertDB(sql);
 				JOptionPane.showMessageDialog(null,"처리가 완료되었습니다.","메시지",JOptionPane.INFORMATION_MESSAGE);
 				memberList.userSelectAll(memberList.getModel());
+				tf1.setText("");
+				tf2.setText("");
+				tf3.setText("");
+				tf4.setText("");
 			}
 			else {
 				JOptionPane.showMessageDialog(null,"주민번호 중복입니다.","메시지",JOptionPane.INFORMATION_MESSAGE);
