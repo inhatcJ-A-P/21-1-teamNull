@@ -15,14 +15,16 @@ import javax.swing.JTextField;
 
 public class BookSearch extends JFrame implements ActionListener {
 
-	JPanel p1,p2,Last;
-	JButton b1,b2;
-	JLabel l1,l2;
-	JTextField t1;
-	BookManage bookManage;
+	private JPanel p1,p2,Last;
+	private  JButton b1,b2;
+	private  JLabel l1,l2;
+	private  JTextField t1;
+	private  BookManage bookManage;
+	
 	public BookSearch(String title, int width, int height, BookManage bookManage) {
 		this.setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this); 	//화면 가운데 찍음
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫을수 있는 특정 상수값을 주었기 때문에 프레임 종료버튼이 클릭될때 프로그램도 같이 사라짐 
 		this.bookManage = bookManage;
@@ -72,6 +74,7 @@ public class BookSearch extends JFrame implements ActionListener {
 				e1.printStackTrace();
 			}
 			JOptionPane.showMessageDialog(null,"검색이 완료되었습니다.","메시지",JOptionPane.INFORMATION_MESSAGE);
+			t1.setText("");
 		}
 	}
 
