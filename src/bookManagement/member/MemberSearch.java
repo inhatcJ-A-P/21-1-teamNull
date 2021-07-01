@@ -23,6 +23,7 @@ public class MemberSearch extends JFrame implements ActionListener {
 	public MemberSearch(String title, int width, int height, MemberList memberList) {
 		this.setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this); 	//화면 가운데 찍음
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //닫을수 있는 특정 상수값을 주었기 때문에 프레임 종료버튼이 클릭될때 프로그램도 같이 사라짐 
 		this.memberList = memberList;
@@ -71,6 +72,7 @@ public class MemberSearch extends JFrame implements ActionListener {
 		else if(obj == b1) {
 			memberList.getNumSearch(memberList.getModel(), t1.getText());
 			JOptionPane.showMessageDialog(null,"검색이 완료되었습니다.","메시지",JOptionPane.INFORMATION_MESSAGE);
+			t1.setText("");
 		}
 	}
 
