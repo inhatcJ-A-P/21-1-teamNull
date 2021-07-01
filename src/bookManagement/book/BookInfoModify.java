@@ -154,6 +154,13 @@ public class BookInfoModify extends JFrame implements ActionListener {
 					+ "lib_author='" + t4.getText() + "', " + "lib_publisher='" + t5.getText() + "', lib_price='" + t6.getText() + "', lib_state='" + t7.getText() + "' " + " where lib_code='"
 					+ t1.getText() + "'";
 			getBookUpdate(sql); 
+			t1.setText("");
+			t2.setText("");
+			t3.setText("");
+			t4.setText("");
+			t5.setText("");
+			t6.setText("");
+			t7.setText("");
 		} else {
 			JOptionPane.showMessageDialog(null, "Y나N만 입력해주세요");
 		}
