@@ -32,6 +32,7 @@ public class BookMain extends JFrame implements ActionListener {
 
 		setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
