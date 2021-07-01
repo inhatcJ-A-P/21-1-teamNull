@@ -139,17 +139,24 @@ public class BookRegistration extends JFrame implements ActionListener {
 			this.dispose();
 		}
 		else if(obj == b1) {
-			
+		
+		
+			if(tf6.getText().equals("Y")||tf6.getText().equals("N")) {
 			if(bookManage.getBookCheck2(tf1.getText())) {
+			
 				String sql = "INSERT INTO lib VALUES ('"+ tf1.getText() +"', '"+ tf2.getText() +"', '"+ tf3.getText() + "', '" + tf4.getText() +  "', '" + tf5.getText() + "', '" + tf6.getText() + "')";
 				InsertBookDB(sql);
 				JOptionPane.showMessageDialog(null,"입력이 완료되었습니다.","메시지",JOptionPane.INFORMATION_MESSAGE);
-
 				bookManage.BookSelectAll(bookManage.getModel());
 			}
 			else {
 				JOptionPane.showMessageDialog(null,"중북된 도서번호가 있습니다.","메시지",JOptionPane.ERROR_MESSAGE);
+			
+			 }
+			}else {
+				JOptionPane.showMessageDialog(null, "Y나N만 입력해주세요");
 			}
+		
 			
 		}
 	}
