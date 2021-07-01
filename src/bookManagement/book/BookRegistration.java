@@ -21,16 +21,12 @@ import jdbc.DB;
 public class BookRegistration extends JFrame implements ActionListener {
 	JButton b2;
 	private JButton b1;
-	private JTextField tf1;
-	private JTextField tf2;
-	private JTextField tf3;
-	private JTextField tf4;
-	private JTextField tf5;
-	private JTextField tf6;
+	private JTextField tf1,tf2,tf3,tf4,tf5,tf6;	
 	private BookManage bookManage;
 	public BookRegistration(String title,int width, int height, BookManage bookManage) {
 		setTitle(title);
 		setSize(width, height);
+		setResizable(false);
 		setLocationRelativeTo(this);
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.bookManage = bookManage;
@@ -125,12 +121,6 @@ public class BookRegistration extends JFrame implements ActionListener {
 	
 	
 	
-	
-	
-	
-		
-
-
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -148,9 +138,15 @@ public class BookRegistration extends JFrame implements ActionListener {
 				InsertBookDB(sql);
 				JOptionPane.showMessageDialog(null,"입력이 완료되었습니다.","메시지",JOptionPane.INFORMATION_MESSAGE);
 				bookManage.BookSelectAll(bookManage.getModel());
+				tf1.setText("");
+				tf2.setText("");
+				tf3.setText("");
+				tf4.setText("");
+				tf5.setText("");
+				tf6.setText("");
 			}
 			else {
-				JOptionPane.showMessageDialog(null,"중북된 도서번호가 있습니다.","메시지",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null,"중복된 도서번호가 있습니다.","메시지",JOptionPane.ERROR_MESSAGE);
 			
 			 }
 			}else {
