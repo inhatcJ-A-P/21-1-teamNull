@@ -199,6 +199,7 @@ public class BookRandB extends JFrame implements ActionListener {
 						createTable(model);
 						String updatesql = "update lib set lib_state = 'N' where lib_code = '"+ tfBNumSub.getText() + "'";
 						query(updatesql);
+						bookRental.getTfRental().setText("N");
 					}
 					else {
 						JOptionPane.showMessageDialog(null, "대여중인 도서입니다.", "메시지", JOptionPane.ERROR_MESSAGE);
@@ -217,11 +218,20 @@ public class BookRandB extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(null, "주민번호를 입력해주세요.", "메시지", JOptionPane.ERROR_MESSAGE);
 			}
 			else {
-				String sql = "delete from rent where lib_code = '" + bookRental.getTfBNum().getText()+"'";
+				String memsql = "select * from member where mb_num = '" + tfID.getText() + "' ";
+				setTable(memsql);
+				tfBNumSub.setText(bookRental.getTfBNum().getText());
+				tfBNameSub.setText(bookRental.getTfBtitle().getText());
+				
+				
+				String sql = "delete from rent where mem_name = '" + name +"'";
 				query(sql);
 				createTable(model);
 				String updatesql = "update lib set lib_state = 'Y' where lib_code = '"+ bookRental.getTfBNum().getText() + "'";
 				query(updatesql);
+				bookRental.getTfRental().setText("Y");
+				
+				
 				
 			}
 			
