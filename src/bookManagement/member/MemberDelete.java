@@ -18,11 +18,11 @@ import javax.swing.table.DefaultTableModel;
 import jdbc.DB;
 
 public class MemberDelete extends JFrame implements ActionListener {
-
-	JPanel p1, p2, Last;
-	JButton b1, b2;
-	JLabel l1, l2;
-	JTextField t1;
+ 	
+	private JPanel p1, p2, Last;
+	private JButton b1, b2;
+	private JLabel l1, l2;
+	private JTextField t1;
 
 	MemberList memberList;
 	public MemberDelete(String title, int width, int height, MemberList memberList) {
