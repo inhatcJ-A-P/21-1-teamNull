@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/bookManagement/BookMain.java=UTF-8
+encoding//src/bookManagement/MasterLogin.java=UTF-8
+encoding//src/bookManagement/book/BookDelete.java=UTF-8
+encoding//src/bookManagement/book/BookInfoModify.java=UTF-8
+encoding//src/bookManagement/book/BookManage.java=UTF-8
+encoding//src/bookManagement/book/BookRegistration.java=UTF-8
+encoding//src/bookManagement/book/BookSearch.java=UTF-8
+encoding//src/bookManagement/member/MemberDelete.java=UTF-8
+encoding//src/bookManagement/member/MemberInfoModify.java=UTF-8
+encoding//src/bookManagement/member/MemberList.java=UTF-8
+encoding//src/bookManagement/member/MemberRegister.java=UTF-8
+encoding//src/bookManagement/member/MemberSearch.java=UTF-8
+encoding//src/bookManagement/rental/BookAllRental.java=UTF-8
+encoding//src/bookManagement/rental/BookRental.java=UTF-8
+encoding//src/jdbc/DB.java=UTF-8
+encoding/<project>=UTF-8
